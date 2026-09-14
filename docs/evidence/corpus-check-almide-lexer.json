@@ -14,13 +14,13 @@
   "files": 3900,
   "bytes": 4341361,
   "processes": 2,
-  "seconds": 0.10497500002384186,
-  "megabytes_per_second": 41.35614192916402,
+  "seconds": 0.10345724993385375,
+  "megabytes_per_second": 41.96284941631143,
   "rejected_lines": 96,
   "largest": {
     "path": "stdlib/value_core.almd",
     "lines": 1325,
     "bytes": 54940,
-    "milliseconds": 5.316916038282216
+    "milliseconds": 4.593166988343
   }
 }

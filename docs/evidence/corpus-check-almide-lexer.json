@@ -1,0 +1,26 @@
+{
+  "platform": "macOS-15.4.1-arm64-arm-64bit",
+  "binary_sha256": "da61bf66328931298a466f11b0471c846837adba602f9252cbde51dd5414fc69",
+  "mode": "`check` over a whole corpus, 2000 files to a process, median of 5 passes; startup is paid once a chunk, not once a file",
+  "root": "/Users/o6lvl4/workspace/github.com/almide/almide",
+  "ext": ".almd",
+  "excluded": [
+    ".claude",
+    ".git",
+    "research",
+    "target",
+    "worktrees"
+  ],
+  "files": 3900,
+  "bytes": 4341361,
+  "processes": 2,
+  "seconds": 0.10497500002384186,
+  "megabytes_per_second": 41.35614192916402,
+  "rejected_lines": 96,
+  "largest": {
+    "path": "stdlib/value_core.almd",
+    "lines": 1325,
+    "bytes": 54940,
+    "milliseconds": 5.316916038282216
+  }
+}

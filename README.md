@@ -43,6 +43,22 @@ process, eight byte-balanced slices in parallel
 ([evidence](docs/evidence/corpus-check-almide.json), measured with
 `bench/corpus_check.py` in gramide).
 
+One keystroke re-reads one item: the engine keeps a parsed file as its
+recover items (here, every declaration and every statement inside a block)
+and re-reads the smallest one an edit touched
+([how](https://github.com/O6lvl4/gramide/blob/main/docs/incremental.md)).
+On gramide's `src/parser.almd` (89 KB), 1,000 letters typed or deleted six
+letters into long words cost 61 µs at the median and 519 µs at the 90th
+percentile, against 2.8 ms for a whole parse, every fiftieth checked against
+one. Over the repository's 4,027 tracked `.almd` files, ten random edits in
+each of the 1,273 that hold a long enough word (12,730 edits, every one
+checked token for token and node for node against a whole parse of the same
+text) gave no difference; 169 edits were read as a whole file, 110 in files
+with no declaration and 58 beside a file's syntax error
+([evidence](docs/evidence/incremental-corpus-almide-repo.json)).
+`ci/incremental_check.py` runs this; `reparse --edit START:OLD_END:NEW_END --new FILE`
+is the one-edit command.
+
 ## How it is written
 
 - **`src/lexer.almd`** — a `Spec` for the shared lexer: keywords, operators,

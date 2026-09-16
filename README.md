@@ -48,13 +48,13 @@ recover items (here, every declaration and every statement inside a block)
 and re-reads the smallest one an edit touched
 ([how](https://github.com/O6lvl4/gramide/blob/main/docs/incremental.md)).
 On gramide's `src/parser.almd` (89 KB), 1,000 letters typed or deleted six
-letters into long words cost 55 µs at the median and 493 µs at the 90th
+letters into long words cost 36 µs at the median and 47 µs at the 90th
 percentile, against 2.6 ms for a whole parse, every fiftieth checked against
 one. Over the repository's 4,027 tracked `.almd` files, ten random edits in
 each of the 1,273 that hold a long enough word (12,730 edits, every one
 checked token for token and node for node against a whole parse of the same
-text) gave no difference; 168 edits were read as a whole file, 110 in files
-with no declaration and 57 beside a file's syntax error
+text) gave no difference; 129 edits were read as a whole file, 110 in files
+with no declaration and 18 beside a file's syntax error
 ([evidence](docs/evidence/incremental-corpus-almide-repo.json)).
 `ci/incremental_check.py` runs this; `reparse --edit START:OLD_END:NEW_END --new FILE`
 is the one-edit command.

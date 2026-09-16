@@ -39,11 +39,11 @@ almide build cli/main.almd -o gramide_almide     # .almd だけの gramide
 キー入力 1 回は item 1 つを読み直すだけです。エンジンはパース済みのファイルを recover item
 （ここでは各宣言と、ブロック内の各文）の入れ子として持ち、編集が触れた最小の item を読み直します
 （[仕組み](https://github.com/O6lvl4/gramide/blob/main/docs/incremental.md)）。gramide の
-`src/parser.almd`（89 KB）で、長い単語の 6 文字目に文字を打つ・消す編集 1,000 回の中央値は 55 µs、
-90 パーセンタイルは 493 µs で、丸ごとのパースは 2.6 ms。50 回に 1 回は丸ごとのパースと照合しています。
+`src/parser.almd`（89 KB）で、長い単語の 6 文字目に文字を打つ・消す編集 1,000 回の中央値は 36 µs、
+90 パーセンタイルは 47 µs で、丸ごとのパースは 2.6 ms。50 回に 1 回は丸ごとのパースと照合しています。
 リポジトリの追跡下 `.almd` 4,027 ファイルのうち十分長い単語を持つ 1,273 ファイルに各 10 回のランダム編集
-（12,730 回、毎回トークンとノードを丸ごとのパースと照合）で差はゼロ、168 回はファイル全体を読みました
-（宣言のないファイルで 110 回、構文エラーの隣で 57 回。[証拠](docs/evidence/incremental-corpus-almide-repo.json)）。
+（12,730 回、毎回トークンとノードを丸ごとのパースと照合）で差はゼロ、129 回はファイル全体を読みました
+（宣言のないファイルで 110 回、構文エラーの隣で 18 回。[証拠](docs/evidence/incremental-corpus-almide-repo.json)）。
 `ci/incremental_check.py` がこれを回し、1 回の編集は `reparse --edit START:OLD_END:NEW_END --new FILE` です。
 
 ## 書き方

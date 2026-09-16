@@ -1,6 +1,6 @@
 {
   "platform": "macOS-26.3-arm64-arm-64bit-Mach-O",
-  "binary_sha256": "948af353d6447331077cf14666ca521f2ef6d503e7b7d388bd6aaee973bf8505",
+  "binary_sha256": "da96bb9aef117597cfd3603a13f7b25905c93ac8d3e7fc396fe4b5f3be331055",
   "root": "/Users/o6lvl4/workspace/github.com/almide/almide",
   "ext": [
     ".almd"
@@ -12,14 +12,14 @@
   "checked": 1273,
   "edits": 12730,
   "mismatches": 0,
-  "fallbacks": 129,
+  "fallbacks": 4,
   "fallback_reasons": {
     "no_lex": 0,
     "no_head": 0,
     "no_parse": 1,
     "no_site": 0,
-    "root_own": 110,
-    "error_near": 18
+    "root_own": 0,
+    "error_near": 3
   },
   "skipped_no_long_word": [
     "crates/almide-wasm/tests/perf/float_math.almd",

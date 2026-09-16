@@ -39,8 +39,8 @@ almide build cli/main.almd -o gramide_almide     # .almd だけの gramide
 キー入力 1 回は item 1 つを読み直すだけです。エンジンはパース済みのファイルを recover item
 （ここでは各宣言と、ブロック内の各文）の入れ子として持ち、編集が触れた最小の item を読み直します
 （[仕組み](https://github.com/O6lvl4/gramide/blob/main/docs/incremental.md)）。gramide の
-`src/parser.almd`（89 KB）で、長い単語の 6 文字目に文字を打つ・消す編集 1,000 回の中央値は 39 µs、
-90 パーセンタイルは 52 µs で、丸ごとのパースは 2.6 ms。50 回に 1 回は丸ごとのパースと照合しています。
+`src/parser.almd`（89 KB）で、長い単語の 6 文字目に文字を打つ・消す編集 1,000 回の中央値は 10 µs、
+90 パーセンタイルは 16 µs で、丸ごとのパースは 2.7 ms。50 回に 1 回は丸ごとのパースと照合しています。
 リポジトリの追跡下 `.almd` 4,027 ファイルのうち十分長い単語を持つ 1,273 ファイルに各 10 回のランダム編集
 （12,730 回、毎回トークンとノードを丸ごとのパースと照合）で差はゼロ、4 回はファイル全体を読みました
 （うち 3 回は構文エラーの隣。[証拠](docs/evidence/incremental-corpus-almide-repo.json)）。

@@ -48,8 +48,8 @@ recover items (here, every declaration and every statement inside a block)
 and re-reads the smallest one an edit touched
 ([how](https://github.com/O6lvl4/gramide/blob/main/docs/incremental.md)).
 On gramide's `src/parser.almd` (89 KB), 1,000 letters typed or deleted six
-letters into long words cost 39 µs at the median and 52 µs at the 90th
-percentile, against 2.6 ms for a whole parse, every fiftieth checked against
+letters into long words cost 10 µs at the median and 16 µs at the 90th
+percentile, against 2.7 ms for a whole parse, every fiftieth checked against
 one. Over the repository's 4,027 tracked `.almd` files, ten random edits in
 each of the 1,273 that hold a long enough word (12,730 edits, every one
 checked token for token and node for node against a whole parse of the same

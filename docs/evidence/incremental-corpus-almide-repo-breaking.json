@@ -7,19 +7,19 @@
   ],
   "excluded": [],
   "edits_per_file": 10,
-  "breaking": false,
+  "breaking": true,
   "files": 4027,
   "checked": 1273,
   "edits": 12730,
   "mismatches": 0,
-  "fallbacks": 4,
+  "fallbacks": 459,
   "fallback_reasons": {
-    "no_lex": 0,
+    "no_lex": 9,
     "no_head": 0,
-    "no_parse": 1,
+    "no_parse": 443,
     "no_site": 0,
     "root_own": 0,
-    "error_near": 3
+    "error_near": 7
   },
   "skipped_no_long_word": [
     "crates/almide-wasm/tests/perf/float_math.almd",

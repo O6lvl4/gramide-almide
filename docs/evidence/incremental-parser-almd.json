@@ -1,0 +1,44 @@
+{
+ "platform": "macOS-26.3-arm64-arm-64bit-Mach-O",
+ "edits": 1000,
+ "seed": 7,
+ "verify_every": 50,
+ "gramide_sha256": "f854e97ae5242ea419fe4aaa776c348cf59c282c220bf7091e40232683f01290",
+ "files": [
+  {
+   "path": "/Users/o6lvl4/workspace/github.com/O6lvl4/gramide/src/parser.almd",
+   "bytes": 149844,
+   "gramide": {
+    "tool": "gramide",
+    "edits": 1000,
+    "median_us": 10.4,
+    "p90_us": 14.4,
+    "max_us": 27.2,
+    "fallbacks": 0,
+    "mismatches": 0,
+    "initial_mismatch": false,
+    "fallback_reasons": {
+     "no_lex": 0,
+     "no_head": 0,
+     "no_parse": 0,
+     "no_site": 0,
+     "root_own": 0,
+     "error_near": 0
+    },
+    "whole_parse_samples": 20,
+    "whole_parse_median_us": 4335.2,
+    "items": 1304,
+    "items_renamed_median": 0,
+    "items_renamed_p90": 0,
+    "items_renamed_max": 0,
+    "edits_renaming_none": 1000,
+    "nodes": 24024,
+    "node_checks": 20,
+    "node_id_breaks": 0,
+    "nodes_renamed_median": 6,
+    "nodes_renamed_p90": 12,
+    "nodes_renamed_max": 12
+   }
+  }
+ ]
+}
